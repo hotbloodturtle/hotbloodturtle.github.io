@@ -4,7 +4,10 @@ const App = () => {
   const Page = Router(window.location.pathname);
   const element = Page();
   const root = document.getElementById("root");
-  root.appendChild(element);
+  while (root.firstChild) {
+    root.removeChild(root.lastChild);
+  }
+  root.append(element);
 };
 
 export default App;
