@@ -1,11 +1,11 @@
 import Home from "./pages/Home.js";
-import Resume from "./pages/Resume.js";
+import Components from "./pages/Components.js";
 
 const Router = (path) => {
   const routes = {
     "/": Home,
     "/index.html": Home,
-    "/resume": Resume,
+    "/components": Components,
   };
   return routes[path];
 };
