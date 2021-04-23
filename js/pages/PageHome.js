@@ -1,13 +1,13 @@
 import App from "../App.js";
 
-const Home = () => {
+const PageHome = () => {
   const div = document.createElement("div");
   div.textContent = "welcome home";
 
   const button = document.createElement("button");
-  button.textContent = "Go components";
+  button.textContent = "Go resume";
   button.addEventListener("click", (e) => {
-    window.history.pushState({}, "", "/components");
+    window.history.pushState({}, "", "/resume");
     App();
   });
 
@@ -15,4 +15,4 @@ const Home = () => {
   return div;
 };
 
-export default Home;
+export default PageHome;
