@@ -1,14 +1,18 @@
-const cssText = ({ fontSize = "18px", fontWeight = "300" }) => `
-  font-size: ${fontSize};
-  font-weight: ${fontWeight};
-  font-family: Roboto, sans-serif;
-`;
+const StyledText = ({ fontSize = "18px", fontWeight = "300" }) => {
+  const cssText = `
+    font-size: ${fontSize};
+    font-weight: ${fontWeight};
+    font-family: Roboto, sans-serif;
+  `;
+  const el = document.createElement("p");
+  el.style.cssText = cssText;
+  return el;
+};
 
 const Text = ({ props, style = {} }) => {
   const { text } = props;
-  const el = document.createElement("p");
+  const el = StyledText({ ...style });
   el.textContent = text;
-  el.style.cssText = cssText({ ...style });
   return el;
 };
 

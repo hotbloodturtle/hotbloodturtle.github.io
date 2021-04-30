@@ -1,13 +1,18 @@
 import Text from "../atoms/Text.js";
 
-const cssText = () => `
-  width: 250px;
-  height: 150px;
-`;
+const StyledTitleTextCard = () => {
+  const cssText = `
+    width: 250px;
+    height: 150px;
+  `;
+  const el = document.createElement("div");
+  el.style.cssText = cssText;
+  return el;
+};
 
 const TitleTextCard = ({ props }) => {
   const { title, subTitle } = props;
-  const el = document.createElement("div");
+  const el = StyledTitleTextCard();
 
   const titleText = Text({
     props: { text: title },
@@ -19,8 +24,6 @@ const TitleTextCard = ({ props }) => {
     const subTitleText = Text({ props: { text: subTitle } });
     el.appendChild(subTitleText);
   }
-
-  el.style.cssText = cssText();
 
   return el;
 };
