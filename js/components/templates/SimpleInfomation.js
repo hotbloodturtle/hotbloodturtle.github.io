@@ -17,7 +17,7 @@ const SimpleInfomation = () => {
   const el = StyledSimpleInfomation();
 
   const titleTextCard = TitleTextCard({
-    props: { title: "홍길동", subTitle: "서비스 엔지니어" },
+    props: { title: "title", subTitle: "sub title" },
   });
   el.appendChild(titleTextCard);
 
