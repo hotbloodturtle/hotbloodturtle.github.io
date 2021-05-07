@@ -1,4 +1,4 @@
-const StyledText = ({ fontSize = "18px", fontWeight = "300" }) => {
+const StyledParagraph = ({ fontSize = "18px", fontWeight = "300" }) => {
   const cssText = `
     font-size: ${fontSize};
     font-weight: ${fontWeight};
@@ -9,11 +9,11 @@ const StyledText = ({ fontSize = "18px", fontWeight = "300" }) => {
   return el;
 };
 
-const Text = ({ props, style = {} }) => {
+const Paragraph = ({ props, style = {} }) => {
   const { text } = props;
-  const el = StyledText({ ...style });
+  const el = StyledParagraph({ ...style });
   el.textContent = text;
   return el;
 };
 
-export default Text;
+export default Paragraph;

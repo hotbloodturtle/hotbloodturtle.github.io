@@ -1,4 +1,4 @@
-import Text from "../atoms/Text.js";
+import Paragraph from "../atoms/Paragraph.js";
 
 const StyledTitleTextCard = () => {
   const cssText = `
@@ -14,14 +14,14 @@ const TitleTextCard = ({ props }) => {
   const { title, subTitle } = props;
   const el = StyledTitleTextCard();
 
-  const titleText = Text({
+  const titleText = Paragraph({
     props: { text: title },
     style: { fontSize: "36px", fontWeight: "500" },
   });
   el.appendChild(titleText);
 
   if (subTitle) {
-    const subTitleText = Text({ props: { text: subTitle } });
+    const subTitleText = Paragraph({ props: { text: subTitle } });
     el.appendChild(subTitleText);
   }
 
