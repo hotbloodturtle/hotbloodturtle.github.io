@@ -1,8 +1,8 @@
 const StyledIcon = () => {
   const cssText = `
-    width: 55px;
-    height: 55px;
-    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
     display: flex;
     justify-content: center;
     align-items: center;

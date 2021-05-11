@@ -19,6 +19,7 @@ const StyledConText = () => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
   `;
   const el = document.createElement("div");
   el.style.cssText = cssText;
@@ -27,10 +28,11 @@ const StyledConText = () => {
 
 const StyledLinkCard = () => {
   const cssText = `
-    height: 130px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
   `;
   const el = document.createElement("div");
   el.style.cssText = cssText;
