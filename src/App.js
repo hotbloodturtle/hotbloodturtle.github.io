@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import PageIndex from "./pages";
+import PageComponents from "./pages/components";
+import LayoutMain from "./layouts/LayoutMain";
+import LayoutBody from "./layouts/LayoutBody";
+import LayoutSidebar from "./layouts/LayoutSidebar";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LayoutMain>
+      <LayoutSidebar />
+      <LayoutBody>
+        <Routes>
+          <Route exact path="/" element={<PageIndex />} />
+          <Route path="/components" element={<PageComponents />} />
+        </Routes>
+      </LayoutBody>
+    </LayoutMain>
   );
-}
+};
 
 export default App;
